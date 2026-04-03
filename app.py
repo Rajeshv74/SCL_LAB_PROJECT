@@ -56,7 +56,23 @@ def simulated_annealing(demand):
 # -----------------------------
 st.title("🌱 Renewable Energy Grid Optimization")
 st.subheader("Simulated Annealing + CPU vs GPU Analysis")
+# -----------------------------
+# Sliders (Like Your UI)
+# -----------------------------
 
+demand = st.slider(
+    "Energy Demand (MW)",
+    min_value=50,
+    max_value=200,
+    value=100
+)
+
+max_energy = st.slider(
+    "Max Energy per Source (MW)",
+    min_value=20,
+    max_value=100,
+    value=50
+)
 demands = [50, 80, 100, 150]
 
 if st.button("Run Optimization ⚡"):
